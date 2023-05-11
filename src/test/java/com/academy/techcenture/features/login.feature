@@ -1,8 +1,10 @@
 Feature: Test Login Functionality of WebOrders application
 
-  Scenario: Login Functionality Positive
+  Background: Common Background Steps for Login Functionality
     Given user launches the browser
     And user navigates to the login page
+
+  Scenario: Login Functionality Positive
     And user enters "Tester" in username input box
     And user enters "test" in password input box
     When user clicks on login button
@@ -10,8 +12,6 @@ Feature: Test Login Functionality of WebOrders application
     And user quits the browser
 
   Scenario: Login Functionality Negative
-    Given user launches the browser
-    And user navigates to the login page
     And user enters "Tester" in username input box
     And user enters "test123!" in password input box
     When user clicks on login button
